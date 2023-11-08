@@ -1,9 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.9.21)  8 NOV 2023 09:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.9.21)  8 NOV 2023 14:53
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**01_paper_outline.tex
+**01_paper_outline
 (./01_paper_outline.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22>
@@ -528,8 +527,7 @@ ckend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count321
 \l__pdf_internal_box=\box113
-)
-(/Users/msandoval/py_projects/ias/ws2324/bai/paper/out/01_paper_outline.aux)
+) (./01_paper_outline.aux)
 \openout1 = `01_paper_outline.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
@@ -624,40 +622,30 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/fonts/map/pdftex/updmap/
-pdftex.map}] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
-[]\OT1/cmr/m/n/12 Bengio, Yoshua and Louradour, J^^Ser^ome and Col-lobert, Ro-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
-\OT1/cmr/m/n/12 nan and We-ston, Ja-son. "Cur-ricu-lum learn-ing." \OT1/cmr/m/i
-t/12 None\OT1/cmr/m/n/12 , 2009.
- []
-
-[3] (/Users/msandoval/py_projects/ias/ws2324/bai/paper/out/01_paper_outline.aux
-) ) 
+pdftex.map}{/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/fonts/enc/dvi
+ps/cm-super/cm-super-ts1.enc}] [2] (./01_paper_outline.bbl) [3]
+(./01_paper_outline.aux) ) 
 Here is how much of TeX's memory you used:
- 7876 strings out of 476025
- 125235 string characters out of 5780533
- 1857388 words of memory out of 5000000
- 28209 multiletter control sequences out of 15000+600000
- 517044 words of font info for 50 fonts, out of 8000000 for 9000
+ 7889 strings out of 476025
+ 125121 string characters out of 5780533
+ 1858388 words of memory out of 5000000
+ 28218 multiletter control sequences out of 15000+600000
+ 517688 words of font info for 52 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 57i,11n,62p,515b,336s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb></usr/local/Cellar/texlive/20230313_2/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/Cellar/texlive/20230313_2/sh
-are/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/Cellar/texl
-ive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr17.pfb></usr/local/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmti12.pfb>
-Output written on /Users/msandoval/py_projects/ias/ws2324/bai/paper/out/01_pape
-r_outline.pdf (3 pages, 98561 bytes).
+ 57i,11n,62p,421b,292s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/Cellar/texlive/20230313_2/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/Cellar/texlive/20230313
+_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/Cella
+r/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/local/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb></usr/local/Cellar/texlive/20230313_2/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb></usr/local/Cellar/texlive/20230313_2/share/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/Cellar/texlive/
+20230313_2/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on 01_paper_outline.pdf (3 pages, 103227 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
+ 50 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

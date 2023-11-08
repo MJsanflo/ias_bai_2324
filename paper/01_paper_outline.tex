@@ -137,8 +137,9 @@
 
 % Abstract gives a brief summary of the main points of a paper:
 \begin{abstract}
-- [1] Provide a concise summary of the paper's key objectives, methods, and findings.
-- [2] Include the primary experiment contributions and implications of the research experiment.
+
+Will provide a concise summary of the paper's key objectives, methods, and findings and include the primary experiment contributions and implications of the research experiment.
+
 \end{abstract}
 
 % the actual content, usually separated over a number of sections
@@ -148,57 +149,78 @@
 \section{Introduction}
 \label{sec:introduction}
 
-- [1] Introduce the seminar project's aim: comparing standard training and curriculum learning for GPT models and analyzing the benefits.
-- [2] Highlight the significance of GPT models and the limitations of traditional training approaches.
-- [3] Reference the key papers that have inspired this project and analyze approaches in the suggested papers.
+\begin{itemize}
+  \item Introduce the seminar project's motivational questions like: \cite{dziri2023faith} Are GPT-3, ChatGPT, and GPT-4 not capable multiplying two numbers? \cite{meng2023locating} \cite{cunningham2023sparse} How can we interpret what is going on inside the GPT during and after training?
+  \item \cite{10.1145/1553374.1553380} Comparing standard training and curriculum learning for GPT models and analyzing the benefits.
+  \item Reference the main results and open questions that have inspired this project and analyze approaches in the suggested papers.
+\end{itemize}
 
 \section{Background Information}
 \label{sec:back_info}
 
-[-] [Optional] Provide introduction to GPT models and their role in natural language processing.
-[1] Discuss the challenges with traditional training methods, which necessitate alternative approaches like curriculum learning.
+\begin{itemize}
+  \item (Optional) Provide introduction to GPT models and their role in natural language processing.
+  \item Discuss the challenges with traditional training methods, which necessitate alternative approaches like curriculum learning.
+  \begin{itemize}
+    \item Limitations of traditional training approaches.
+    \item Methods for transparency and steerability.
+  \end{itemize}
+\end{itemize}
 
 \section{Related Work}
 \label{sec:rel_work}
 
-[1] Summarize the contributions of relevant papers:
-- Paper 2 "Curriculum Learning": Eg. Discuss the concept of curriculum learning in deep learning and its potential advantages.
-- Paper 3 "Limits of Transformers on Compositionality": Eg. Highlight challenges GPT models face in handling compositional tasks.
-- Paper 4 "Locating and Editing Factual Associations in GPT": Eg. Explain how this paper addresses GPT model interpretability.
-- Paper 5 "Sparse Autoencoders in Language Models": Eg.Describe the findings related to interpretable features in language models.
+Summarize the contributions of relevant papers:
+\begin{itemize}
+  \item \cite{10.1145/1553374.1553380} "Curriculum Learning": Eg. Discuss the concept of curriculum learning its effects on convergence speed and how this can be a global optimization method for non-convex functions .
+  \item \cite{dziri2023faith} "Limits of Transformers on Compositionality": Eg. Trivial compositionality trivial problems: Are these errors incidental, or do they signal more substantial limitations? How LLMs reduce multi-step compositional reasoning into linearized subgraph matching, without necessarily developing systematic problem-solving skills.
+  \item \cite{meng2023locating} "Locating and Editing Factual Associations in GPT": Eg. How direct manipulation of computational mechanisms may be a feasible approach for model editing.
+  \item \cite{cunningham2023sparse} "Sparse Autoencoders in Language Models": Eg. Model transparency and steerability enabled by polysemanticity, superposition and interpretability measured by automated methods.
+\end{itemize}
 
 \section{Model Description}
 \label{sec:model_desc}
 
-[1] Describe the provided minimal GPT model, including its architecture and core components.
-[2] Explain the source of training data and any preprocessing steps, such as tokenization or data cleaning.
+\begin{itemize}
+  \item Describe the provided minimal GPT model, including its architecture and core components.
+  \item Explain the source of training data and any preprocessing steps, such as tokenization or data cleaning.
+\end{itemize}
 
 \section{Model Analysis}
 \label{sec:model_analysis}
 
-[1] Explain the standard training approach using randomly shuffled text data.
-[2] Describe the curriculum learning strategy used and its implementation for gradually increasing example difficulty.
-[3] Detail the experimental setup, specifying hyperparameters, the choice of optimizer, and any unique implementation choices.
+\begin{itemize}
+  \item Explain the standard training approach using randomly shuffled text data.
+  \item Describe the curriculum learning strategy used and its implementation for gradually increasing example difficulty.
+  \item Detail the experimental setup, specifying hyperparameters, the choice of optimizer, and any unique implementation choices.
+  \item Detail on transparency and steerability.
+\end{itemize}
 
 \section{Results And Discussion}
 \label{sec:result_discussion}
 
-[1] Present a comparison of the GPT model's performance under standard and curriculum learning.
-[2] Analyze the benefits of curriculum learning, such as faster convergence, improved generalization, and enhanced performance on complex tasks.
-[3] Discuss any challenges faced during the experiments, including data selection and curriculum design.
+\begin{itemize}
+  \item Present a comparison of the GPT model's performance under standard and curriculum learning.
+  \item Analyze the benefits of curriculum learning, such as faster convergence, improved generalization, and enhanced performance on complex tasks.
+  \item Discuss any challenges faced during the experiments, including data selection and curriculum design.
+\end{itemize}
 
 \section{Understanding GPT Behaviour}
 \label{sec:gpt_behaviour}
 
-[1] Summarize key findings from Paper 4 (Locating and Editing Factual Associations in GPT) and Paper 5 (Sparse Autoencoders in Language Models).
-[2] Provide insights into the inner workings of GPT models during and after training, particularly focusing on interpretability and feature analysis.
+\begin{itemize}
+  \item Summarize key findings from \cite{meng2023locating} and \cite{cunningham2023sparse}.
+  \item Provide insights into the inner workings of GPT models during and after training, particularly focusing on interpretability and feature analysis.
+\end{itemize}
 
 \section{Conclusion}
 \label{sec:concl}
 
-[1] Summarize the primary findings and contributions of the experiment project.
-[2] Discuss the implications of the results for the field of natural language processing and deep learning referencing the initial motivational questions.
-[3] Suggest future research experiment directions, such as exploring advanced curriculum strategies and further improving GPT model interpretability.
+\begin{itemize}
+  \item Summarize the primary findings and contributions of the experiment project.
+  \item Discuss the implications of the results for the field of natural language processing and deep learning referencing the initial motivational questions.
+  \item Suggest future research experiment directions, such as exploring advanced curriculum strategies and further improving GPT model interpretability.
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % hier werden - zum Ende des Textes - die bibliographischen Referenzen
@@ -209,17 +231,9 @@
 %
 \section{References}
 \label{sec:references}
-\begin{thebibliography}{9}
 
-    \bibitem{paper3} Nouha Dziri and Ximing Lu and Melanie Sclar and Xiang Lorraine Li and Liwei Jiang and Bill Yuchen Lin and Peter West and Chandra Bhagavatula and Ronan Le Bras and Jena D. Hwang and Soumya Sanyal and Sean Welleck and Xiang Ren and Allyson Ettinger and Zaid Harchaoui and Yejin Choi. "{Faith and Fate: Limits of Transformers on Compositionality.}" \textit{37th Conference on Neural Information Processing Systems (NeurIPS 2023)}, 2023. arXiv:2305.18654v3
-
-    \bibitem{paper4} Kevin Meng, David Bau, Alex Andonian, Yonatan Belinkov. "Locating and Editing Factual Associations in GPT." \textit{36th Conference on Neural Information Processing Systems (NeurIPS 2022)}, 2022. arXiv:2202.05262v5
-
-    \bibitem{paper5} Hoagy Cunningham, Aidan Ewart, Logan Riggs, Robert Huben, Lee Sharkey. "Sparse Autoencoders Find Highly Interpretable Features in Language Models." \textit{ICML '09: Proceedings of the 26th Annual International Conference on Machine Learning}, 2023. arXiv:2309.08600v3
-
-    \bibitem{paper2} Bengio, Yoshua and Louradour, J\'{e}r\^{o}me and Collobert, Ronan and Weston, Jason. "Curriculum learning." \textit{None}, 2009. https://doi.org/10.1145/1553374.1553380
-
-\end{thebibliography}
+\bibliographystyle{plain}  % Choose your bibliography style
+\bibliography{refs}  % Specify your .bib file
 
 \end{document}
 

@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+
+\bibitem{10.1145/1553374.1553380}
+Yoshua Bengio, J\'{e}r\^{o}me Louradour, Ronan Collobert, and Jason Weston.
+\newblock Curriculum learning.
+\newblock In {\em Proceedings of the 26th Annual International Conference on
+  Machine Learning}, ICML '09, page 41–48, New York, NY, USA, 2009.
+  Association for Computing Machinery.
+
+\bibitem{cunningham2023sparse}
+Hoagy Cunningham, Aidan Ewart, Logan Riggs, Robert Huben, and Lee Sharkey.
+\newblock Sparse autoencoders find highly interpretable features in language
+  models, 2023.
+
+\bibitem{dziri2023faith}
+Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang~Lorraine Li, Liwei Jiang,
+  Bill~Yuchen Lin, Peter West, Chandra Bhagavatula, Ronan~Le Bras, Jena~D.
+  Hwang, Soumya Sanyal, Sean Welleck, Xiang Ren, Allyson Ettinger, Zaid
+  Harchaoui, and Yejin Choi.
+\newblock Faith and fate: Limits of transformers on compositionality, 2023.
+
+\bibitem{meng2023locating}
+Kevin Meng, David Bau, Alex Andonian, and Yonatan Belinkov.
+\newblock Locating and editing factual associations in gpt, 2023.
+
+\end{thebibliography}
