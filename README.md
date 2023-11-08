@@ -1,2 +1,2 @@
-# ias_bai_2324
-Bio-Inspired AI 2023/24 Semester Seminar Project. Team: Jeremy, Benedikt, Malte, Arian and Manuel.
+# Bio-Inspired AI Seminar
+Bio-Inspired AI WinSe 2023/24 Seminar Project. Team: Jeremy, Benedikt, Malte, Arian and Manuel.
