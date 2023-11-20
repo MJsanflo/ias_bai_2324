@@ -11,7 +11,7 @@ python generate_multi.py
 `train.py` is a file from the nanoGPT repo. To train the transformer run: 
 
 ```sh
-python train.py config/train_multiplications.py
+python train.py config/train_multiplications_scratch_baby.py
 ```
 
 3. `sample.py` is also from the nanoGPT repo. To see how the model performs run:

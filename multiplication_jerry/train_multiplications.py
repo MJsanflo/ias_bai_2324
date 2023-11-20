@@ -35,7 +35,7 @@ warmup_iters = 100  # not super necessary potentially
 # on macbook also add
 device = "cpu"  # run on cpu only
 compile = False  # do not torch compile the model
-# python train.py config/train_multiplications.py
+# python train.py config/train_multiplications_scratch_baby.py
 
 
 # python sample.py --out_dir="out-multi" --start="What is 1 times 2?" --num_samples=5 --max_new_tokens=10 --device="cpu"
