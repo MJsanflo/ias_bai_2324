@@ -3,8 +3,9 @@ import numpy as np
 import os
 import pickle
 
-max_num_of_digits = 5
-number_of_examples = 10000000
+max_num_of_digits = 3
+min_num_of_digits = 3
+number_of_examples = 1800000
 
 
 def random_with_digit(n: int):
@@ -67,7 +68,7 @@ def generate_numbers(filename: str):
     )
     with open(filename, "w") as file:
         for _ in range(0, number_of_examples):
-            num_of_digits = randint(1, max_num_of_digits)
+            num_of_digits = randint(min_num_of_digits, max_num_of_digits)
             number1 = random_with_digit(num_of_digits)
             number2 = random_with_digit(num_of_digits)
             file.write(f"What is {number1} times {number2}?\n{number1*number2}\n\n")
