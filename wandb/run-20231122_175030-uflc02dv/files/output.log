@@ -1,0 +1,30 @@
+
+step 0: train loss 4.3869, val loss 4.3764
+iter 0: loss 4.4239, time 139410.31ms, mfu -100.00%
+iter 1: loss 4.4436, time 9023.18ms, mfu -100.00%
+iter 2: loss 4.0024, time 9049.31ms, mfu -100.00%
+iter 3: loss 3.6549, time 9097.26ms, mfu -100.00%
+iter 4: loss 3.2381, time 9137.58ms, mfu -100.00%
+iter 5: loss 3.0422, time 9041.69ms, mfu 0.02%
+iter 6: loss 2.7810, time 9060.38ms, mfu 0.02%
+iter 7: loss 2.6708, time 9456.85ms, mfu 0.02%
+iter 8: loss 2.5206, time 10212.00ms, mfu 0.02%
+iter 9: loss 2.3510, time 9978.30ms, mfu 0.02%
+iter 10: loss 2.2468, time 10265.38ms, mfu 0.02%
+iter 11: loss 2.1175, time 9352.05ms, mfu 0.02%
+iter 12: loss 2.0062, time 10588.09ms, mfu 0.02%
+iter 13: loss 1.8862, time 10101.67ms, mfu 0.02%
+iter 14: loss 1.7801, time 10843.41ms, mfu 0.02%
+iter 15: loss 1.6631, time 10709.43ms, mfu 0.02%
+iter 16: loss 1.5597, time 11253.75ms, mfu 0.02%
+iter 17: loss 1.5427, time 9333.72ms, mfu 0.02%
+iter 18: loss 1.4671, time 9441.91ms, mfu 0.02%
+iter 19: loss 1.4174, time 10679.27ms, mfu 0.02%
+Traceback (most recent call last):
+  File "/Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/train.py", line 302, in <module>
+    scaler.scale(loss).backward()
+  File "/Users/msandoval/py_virtual_envs/bai_1/lib/python3.11/site-packages/torch/_tensor.py", line 492, in backward
+    torch.autograd.backward(
+  File "/Users/msandoval/py_virtual_envs/bai_1/lib/python3.11/site-packages/torch/autograd/__init__.py", line 251, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

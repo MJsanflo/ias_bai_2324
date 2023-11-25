@@ -1,0 +1,348 @@
+2023-11-22 17:50:30,495 INFO    StreamThr :34249 [internal.py:wandb_internal():86] W&B internal server running at pid: 34249, started at: 2023-11-22 17:50:30.494336
+2023-11-22 17:50:30,498 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status
+2023-11-22 17:50:30,500 INFO    WriterThread:34249 [datastore.py:open_for_write():85] open: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/run-uflc02dv.wandb
+2023-11-22 17:50:30,501 DEBUG   SenderThread:34249 [sender.py:send():380] send: header
+2023-11-22 17:50:30,573 DEBUG   SenderThread:34249 [sender.py:send():380] send: run
+2023-11-22 17:50:31,045 INFO    SenderThread:34249 [dir_watcher.py:__init__():211] watching files in: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files
+2023-11-22 17:50:31,046 INFO    SenderThread:34249 [sender.py:_start_run_threads():1124] run started: uflc02dv with start time 1700671830.495505
+2023-11-22 17:50:31,063 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: check_version
+2023-11-22 17:50:31,063 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: check_version
+2023-11-22 17:50:31,203 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: run_start
+2023-11-22 17:50:31,214 DEBUG   HandlerThread:34249 [system_info.py:__init__():32] System info init
+2023-11-22 17:50:31,215 DEBUG   HandlerThread:34249 [system_info.py:__init__():47] System info init done
+2023-11-22 17:50:31,215 INFO    HandlerThread:34249 [system_monitor.py:start():194] Starting system monitor
+2023-11-22 17:50:31,215 INFO    SystemMonitor:34249 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-22 17:50:31,216 INFO    HandlerThread:34249 [system_monitor.py:probe():214] Collecting system info
+2023-11-22 17:50:31,216 INFO    SystemMonitor:34249 [interfaces.py:start():190] Started cpu monitoring
+2023-11-22 17:50:31,217 DEBUG   HandlerThread:34249 [system_info.py:probe():196] Probing system
+2023-11-22 17:50:31,217 INFO    SystemMonitor:34249 [interfaces.py:start():190] Started disk monitoring
+2023-11-22 17:50:31,218 INFO    SystemMonitor:34249 [interfaces.py:start():190] Started memory monitoring
+2023-11-22 17:50:31,221 INFO    SystemMonitor:34249 [interfaces.py:start():190] Started network monitoring
+2023-11-22 17:50:31,232 DEBUG   HandlerThread:34249 [system_info.py:_probe_git():181] Probing git
+2023-11-22 17:50:31,288 DEBUG   HandlerThread:34249 [system_info.py:_probe_git():189] Probing git done
+2023-11-22 17:50:31,288 DEBUG   HandlerThread:34249 [system_info.py:probe():244] Probing system done
+2023-11-22 17:50:31,288 DEBUG   HandlerThread:34249 [system_monitor.py:probe():223] {'os': 'macOS-14.0-x86_64-i386-64bit', 'python': '3.11.6', 'heartbeatAt': '2023-11-22T16:50:31.217589', 'startedAt': '2023-11-22T16:50:30.483573', 'docker': None, 'cuda': None, 'args': ('config/train_multiplications_gpt2_baby.py',), 'state': 'running', 'program': '/Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/karpathy/nanoGPT.git', 'commit': '202617baba6d2e4283eda2113dfe9d1fbf4abd40'}, 'email': None, 'root': '/Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT', 'host': 'dhcp-172-21-55-3.wlan.uni-hamburg.de.local', 'username': 'msandoval', 'executable': '/Users/msandoval/py_virtual_envs/bai_1/bin/python', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2000, 'min': 2000, 'max': 2000}, 'cpu_freq_per_core': [{'current': 2000, 'min': 2000, 'max': 2000}], 'disk': {'/': {'total': 931.546989440918, 'used': 12.428295135498047}}, 'memory': {'total': 32.0}}
+2023-11-22 17:50:31,288 INFO    HandlerThread:34249 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-22 17:50:31,289 INFO    HandlerThread:34249 [system_monitor.py:probe():227] Publishing system info
+2023-11-22 17:50:31,289 DEBUG   HandlerThread:34249 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-22 17:50:31,308 DEBUG   HandlerThread:34249 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-22 17:50:31,309 INFO    HandlerThread:34249 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-22 17:50:31,318 DEBUG   SenderThread:34249 [sender.py:send():380] send: files
+2023-11-22 17:50:31,319 INFO    SenderThread:34249 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2023-11-22 17:50:31,328 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:50:31,329 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:50:31,333 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:50:31,653 DEBUG   SenderThread:34249 [sender.py:send():380] send: telemetry
+2023-11-22 17:50:31,954 INFO    wandb-upload_0:34249 [upload_job.py:push():131] Uploaded file /var/folders/vp/22rdd2y94w319qjxgs_q7j1m0000gn/T/tmp14wj5mp_wandb/bqscg4vt-wandb-metadata.json
+2023-11-22 17:50:32,051 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/wandb-metadata.json
+2023-11-22 17:50:32,051 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/requirements.txt
+2023-11-22 17:50:35,668 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:50:40,679 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:50:45,693 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:50:46,333 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:50:46,333 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:50:46,334 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:50:51,539 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:50:56,552 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:51:01,333 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:51:01,334 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:51:01,334 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:51:01,566 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:51:02,152 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/config.yaml
+2023-11-22 17:51:06,774 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:51:11,784 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:51:16,338 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:51:16,338 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:51:16,339 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:51:17,599 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:51:22,611 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:51:27,625 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:51:31,223 DEBUG   SystemMonitor:34249 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-11-22 17:51:31,225 DEBUG   SenderThread:34249 [sender.py:send():380] send: stats
+2023-11-22 17:51:31,339 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:51:31,339 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:51:31,339 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:51:33,550 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:51:38,563 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:51:43,576 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:51:46,343 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:51:46,343 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:51:46,343 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:51:48,593 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:51:53,607 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:51:58,619 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:52:01,229 DEBUG   SenderThread:34249 [sender.py:send():380] send: stats
+2023-11-22 17:52:01,344 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:52:01,345 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:52:01,345 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:52:04,571 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:52:09,585 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:52:14,599 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:52:16,348 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:52:16,348 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:52:16,349 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:52:20,531 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:52:25,542 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:52:30,560 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:52:31,233 DEBUG   SenderThread:34249 [sender.py:send():380] send: stats
+2023-11-22 17:52:31,348 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:52:31,348 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:52:31,349 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:52:36,563 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:52:40,460 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:52:40,815 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-22 17:52:40,819 DEBUG   SenderThread:34249 [sender.py:send():380] send: history
+2023-11-22 17:52:40,819 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: summary_record
+2023-11-22 17:52:40,820 INFO    SenderThread:34249 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-22 17:52:41,464 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/wandb-summary.json
+2023-11-22 17:52:41,824 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:52:42,469 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:52:46,352 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:52:46,353 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:52:46,354 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:52:47,568 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:52:52,498 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:52:52,752 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:52:57,766 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:53:01,238 DEBUG   SenderThread:34249 [sender.py:send():380] send: stats
+2023-11-22 17:53:01,353 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:53:01,353 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:53:01,355 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:53:02,533 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:53:03,568 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:53:08,582 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:53:10,555 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:53:13,832 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:53:16,357 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:53:16,358 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:53:16,359 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:53:18,920 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:53:20,591 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:53:23,933 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:53:28,614 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:53:29,062 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:53:31,241 DEBUG   SenderThread:34249 [sender.py:send():380] send: stats
+2023-11-22 17:53:31,357 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:53:31,358 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:53:31,358 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:53:34,545 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:53:38,644 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:53:40,110 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:53:45,128 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:53:46,357 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:53:46,358 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:53:46,363 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:53:46,662 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:53:50,538 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:53:55,619 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:53:56,692 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:54:00,636 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:54:01,245 DEBUG   SenderThread:34249 [sender.py:send():380] send: stats
+2023-11-22 17:54:01,360 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:54:01,361 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:54:01,364 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:54:05,833 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:54:06,715 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:54:10,843 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:54:16,361 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:54:16,361 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:54:16,368 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:54:16,608 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:54:16,747 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:54:21,621 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:54:26,775 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:54:27,078 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:54:31,248 DEBUG   SenderThread:34249 [sender.py:send():380] send: stats
+2023-11-22 17:54:31,366 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:54:31,366 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:54:31,372 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:54:32,624 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:54:36,803 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:54:38,431 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:54:43,442 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:54:46,370 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:54:46,371 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:54:46,373 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:54:46,832 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:54:48,549 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:54:53,563 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:54:56,865 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:54:59,122 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:55:01,254 DEBUG   SenderThread:34249 [sender.py:send():380] send: stats
+2023-11-22 17:55:01,372 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:55:01,373 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:55:01,379 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:55:04,603 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:55:07,899 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:55:09,972 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:55:14,984 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:55:16,375 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:55:16,375 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:55:16,384 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:55:17,929 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:55:20,677 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:55:25,693 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:55:29,968 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:55:30,928 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:55:31,259 DEBUG   SenderThread:34249 [sender.py:send():380] send: stats
+2023-11-22 17:55:31,376 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:55:31,377 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:55:31,387 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:55:36,602 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:55:37,991 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:55:42,269 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:55:46,376 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:55:46,377 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:55:46,393 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:55:47,697 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:55:48,023 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:55:52,717 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:55:58,066 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:55:58,377 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:56:01,264 DEBUG   SenderThread:34249 [sender.py:send():380] send: stats
+2023-11-22 17:56:01,381 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-22 17:56:01,382 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: stop_status
+2023-11-22 17:56:01,395 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:56:03,568 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:56:07,648 DEBUG   SenderThread:34249 [sender.py:send():380] send: exit
+2023-11-22 17:56:07,648 INFO    SenderThread:34249 [sender.py:send_exit():585] handling exit code: 255
+2023-11-22 17:56:07,649 INFO    SenderThread:34249 [sender.py:send_exit():587] handling runtime: 336
+2023-11-22 17:56:07,649 INFO    SenderThread:34249 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-22 17:56:07,650 INFO    SenderThread:34249 [sender.py:send_exit():593] send defer
+2023-11-22 17:56:07,650 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: defer
+2023-11-22 17:56:07,651 INFO    HandlerThread:34249 [handler.py:handle_request_defer():172] handle defer: 0
+2023-11-22 17:56:07,651 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: defer
+2023-11-22 17:56:07,651 INFO    SenderThread:34249 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-11-22 17:56:07,651 INFO    SenderThread:34249 [sender.py:transition_state():613] send defer: 1
+2023-11-22 17:56:07,651 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: defer
+2023-11-22 17:56:07,651 INFO    HandlerThread:34249 [handler.py:handle_request_defer():172] handle defer: 1
+2023-11-22 17:56:07,652 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: defer
+2023-11-22 17:56:07,652 INFO    SenderThread:34249 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-11-22 17:56:07,652 INFO    SenderThread:34249 [sender.py:transition_state():613] send defer: 2
+2023-11-22 17:56:07,652 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: defer
+2023-11-22 17:56:07,652 INFO    HandlerThread:34249 [handler.py:handle_request_defer():172] handle defer: 2
+2023-11-22 17:56:07,652 INFO    HandlerThread:34249 [system_monitor.py:finish():203] Stopping system monitor
+2023-11-22 17:56:07,652 DEBUG   SystemMonitor:34249 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-11-22 17:56:07,652 INFO    HandlerThread:34249 [interfaces.py:finish():202] Joined cpu monitor
+2023-11-22 17:56:07,652 DEBUG   SystemMonitor:34249 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-11-22 17:56:07,653 INFO    HandlerThread:34249 [interfaces.py:finish():202] Joined disk monitor
+2023-11-22 17:56:07,653 INFO    HandlerThread:34249 [interfaces.py:finish():202] Joined memory monitor
+2023-11-22 17:56:07,653 INFO    HandlerThread:34249 [interfaces.py:finish():202] Joined network monitor
+2023-11-22 17:56:07,654 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: defer
+2023-11-22 17:56:07,654 INFO    SenderThread:34249 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-11-22 17:56:07,654 INFO    SenderThread:34249 [sender.py:transition_state():613] send defer: 3
+2023-11-22 17:56:07,654 DEBUG   SenderThread:34249 [sender.py:send():380] send: stats
+2023-11-22 17:56:07,654 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: defer
+2023-11-22 17:56:07,654 INFO    HandlerThread:34249 [handler.py:handle_request_defer():172] handle defer: 3
+2023-11-22 17:56:07,654 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: defer
+2023-11-22 17:56:07,655 INFO    SenderThread:34249 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-11-22 17:56:07,655 INFO    SenderThread:34249 [sender.py:transition_state():613] send defer: 4
+2023-11-22 17:56:07,655 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: defer
+2023-11-22 17:56:07,655 INFO    HandlerThread:34249 [handler.py:handle_request_defer():172] handle defer: 4
+2023-11-22 17:56:07,655 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: defer
+2023-11-22 17:56:07,655 INFO    SenderThread:34249 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-11-22 17:56:07,655 INFO    SenderThread:34249 [sender.py:transition_state():613] send defer: 5
+2023-11-22 17:56:07,655 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: defer
+2023-11-22 17:56:07,655 INFO    HandlerThread:34249 [handler.py:handle_request_defer():172] handle defer: 5
+2023-11-22 17:56:07,656 DEBUG   SenderThread:34249 [sender.py:send():380] send: summary
+2023-11-22 17:56:07,656 INFO    SenderThread:34249 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-22 17:56:07,656 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: defer
+2023-11-22 17:56:07,656 INFO    SenderThread:34249 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-11-22 17:56:07,656 INFO    SenderThread:34249 [sender.py:transition_state():613] send defer: 6
+2023-11-22 17:56:07,656 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: defer
+2023-11-22 17:56:07,656 INFO    HandlerThread:34249 [handler.py:handle_request_defer():172] handle defer: 6
+2023-11-22 17:56:07,657 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: defer
+2023-11-22 17:56:07,657 INFO    SenderThread:34249 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-11-22 17:56:07,657 INFO    SenderThread:34249 [sender.py:transition_state():613] send defer: 7
+2023-11-22 17:56:07,657 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: status_report
+2023-11-22 17:56:07,657 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: defer
+2023-11-22 17:56:07,657 INFO    HandlerThread:34249 [handler.py:handle_request_defer():172] handle defer: 7
+2023-11-22 17:56:07,657 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: defer
+2023-11-22 17:56:07,657 INFO    SenderThread:34249 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-11-22 17:56:08,102 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/wandb-summary.json
+2023-11-22 17:56:08,649 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-22 17:56:09,652 INFO    SenderThread:34249 [sender.py:transition_state():613] send defer: 8
+2023-11-22 17:56:09,652 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: poll_exit
+2023-11-22 17:56:09,653 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: defer
+2023-11-22 17:56:09,653 INFO    HandlerThread:34249 [handler.py:handle_request_defer():172] handle defer: 8
+2023-11-22 17:56:09,654 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: defer
+2023-11-22 17:56:09,655 INFO    SenderThread:34249 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-11-22 17:56:09,655 INFO    SenderThread:34249 [job_builder.py:build():298] Attempting to build job artifact
+2023-11-22 17:56:09,656 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-22 17:56:09,657 INFO    SenderThread:34249 [job_builder.py:_get_source_type():428] is repo sourced job
+2023-11-22 17:56:09,730 INFO    SenderThread:34249 [job_builder.py:build():404] adding wandb-job metadata file
+2023-11-22 17:56:09,739 INFO    SenderThread:34249 [sender.py:transition_state():613] send defer: 9
+2023-11-22 17:56:09,740 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: poll_exit
+2023-11-22 17:56:09,740 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: defer
+2023-11-22 17:56:09,741 INFO    HandlerThread:34249 [handler.py:handle_request_defer():172] handle defer: 9
+2023-11-22 17:56:09,741 DEBUG   SenderThread:34249 [sender.py:send():380] send: artifact
+2023-11-22 17:56:10,111 INFO    Thread-12 :34249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:56:10,624 INFO    SenderThread:34249 [sender.py:send_artifact():1458] sent artifact job-https___github.com_karpathy_nanoGPT.git_train.py - {'id': 'QXJ0aWZhY3Q6NjQ1OTUzMzg0', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjExNzE5NTI2OA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NjQ1OTUzMzg0', 'versionIndex': 2}}}
+2023-11-22 17:56:10,624 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: defer
+2023-11-22 17:56:10,624 INFO    SenderThread:34249 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-11-22 17:56:10,624 INFO    SenderThread:34249 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-11-22 17:56:10,662 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-22 17:56:11,115 INFO    SenderThread:34249 [dir_watcher.py:finish():388] scan: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files
+2023-11-22 17:56:11,116 INFO    SenderThread:34249 [dir_watcher.py:finish():402] scan save: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/requirements.txt requirements.txt
+2023-11-22 17:56:11,116 INFO    SenderThread:34249 [dir_watcher.py:finish():402] scan save: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log output.log
+2023-11-22 17:56:11,116 INFO    SenderThread:34249 [dir_watcher.py:finish():402] scan save: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/config.yaml config.yaml
+2023-11-22 17:56:11,123 INFO    SenderThread:34249 [dir_watcher.py:finish():402] scan save: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/wandb-summary.json wandb-summary.json
+2023-11-22 17:56:11,123 INFO    SenderThread:34249 [dir_watcher.py:finish():402] scan save: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/wandb-metadata.json wandb-metadata.json
+2023-11-22 17:56:11,124 INFO    SenderThread:34249 [sender.py:transition_state():613] send defer: 10
+2023-11-22 17:56:11,124 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: poll_exit
+2023-11-22 17:56:11,124 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: defer
+2023-11-22 17:56:11,124 INFO    HandlerThread:34249 [handler.py:handle_request_defer():172] handle defer: 10
+2023-11-22 17:56:11,129 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: defer
+2023-11-22 17:56:11,129 INFO    SenderThread:34249 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-11-22 17:56:11,129 INFO    SenderThread:34249 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-22 17:56:11,551 INFO    wandb-upload_0:34249 [upload_job.py:push():131] Uploaded file /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/requirements.txt
+2023-11-22 17:56:11,588 INFO    wandb-upload_1:34249 [upload_job.py:push():131] Uploaded file /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/output.log
+2023-11-22 17:56:11,622 INFO    wandb-upload_2:34249 [upload_job.py:push():131] Uploaded file /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/config.yaml
+2023-11-22 17:56:11,665 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-22 17:56:11,665 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: poll_exit
+2023-11-22 17:56:11,689 INFO    wandb-upload_3:34249 [upload_job.py:push():131] Uploaded file /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/files/wandb-summary.json
+2023-11-22 17:56:11,890 INFO    Thread-11 (_thread_body):34249 [sender.py:transition_state():613] send defer: 11
+2023-11-22 17:56:11,890 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: defer
+2023-11-22 17:56:11,891 INFO    HandlerThread:34249 [handler.py:handle_request_defer():172] handle defer: 11
+2023-11-22 17:56:11,891 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: defer
+2023-11-22 17:56:11,892 INFO    SenderThread:34249 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-11-22 17:56:11,892 INFO    SenderThread:34249 [file_pusher.py:join():181] waiting for file pusher
+2023-11-22 17:56:11,892 INFO    SenderThread:34249 [sender.py:transition_state():613] send defer: 12
+2023-11-22 17:56:11,892 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: defer
+2023-11-22 17:56:11,892 INFO    HandlerThread:34249 [handler.py:handle_request_defer():172] handle defer: 12
+2023-11-22 17:56:11,892 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: defer
+2023-11-22 17:56:11,893 INFO    SenderThread:34249 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-11-22 17:56:11,893 INFO    SenderThread:34249 [file_stream.py:finish():595] file stream finish called
+2023-11-22 17:56:12,435 INFO    SenderThread:34249 [file_stream.py:finish():599] file stream finish is done
+2023-11-22 17:56:12,435 INFO    SenderThread:34249 [sender.py:transition_state():613] send defer: 13
+2023-11-22 17:56:12,435 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: defer
+2023-11-22 17:56:12,435 INFO    HandlerThread:34249 [handler.py:handle_request_defer():172] handle defer: 13
+2023-11-22 17:56:12,435 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: defer
+2023-11-22 17:56:12,435 INFO    SenderThread:34249 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-11-22 17:56:12,435 INFO    SenderThread:34249 [sender.py:transition_state():613] send defer: 14
+2023-11-22 17:56:12,436 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: defer
+2023-11-22 17:56:12,436 INFO    HandlerThread:34249 [handler.py:handle_request_defer():172] handle defer: 14
+2023-11-22 17:56:12,436 DEBUG   SenderThread:34249 [sender.py:send():380] send: final
+2023-11-22 17:56:12,436 DEBUG   SenderThread:34249 [sender.py:send():380] send: footer
+2023-11-22 17:56:12,436 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: defer
+2023-11-22 17:56:12,436 INFO    SenderThread:34249 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-11-22 17:56:12,437 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-22 17:56:12,437 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: poll_exit
+2023-11-22 17:56:12,438 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-22 17:56:12,438 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: poll_exit
+2023-11-22 17:56:12,439 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: server_info
+2023-11-22 17:56:12,439 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: server_info
+2023-11-22 17:56:12,441 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: get_summary
+2023-11-22 17:56:12,443 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: sampled_history
+2023-11-22 17:56:12,444 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-22 17:56:12,446 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: job_info
+2023-11-22 17:56:12,590 DEBUG   SenderThread:34249 [sender.py:send_request():407] send_request: job_info
+2023-11-22 17:56:12,591 INFO    MainThread:34249 [wandb_run.py:_footer_history_summary_info():3760] rendering history
+2023-11-22 17:56:12,591 INFO    MainThread:34249 [wandb_run.py:_footer_history_summary_info():3792] rendering summary
+2023-11-22 17:56:12,592 INFO    MainThread:34249 [wandb_run.py:_footer_sync_info():3719] logging synced files
+2023-11-22 17:56:12,592 DEBUG   HandlerThread:34249 [handler.py:handle_request():146] handle_request: shutdown
+2023-11-22 17:56:12,593 INFO    HandlerThread:34249 [handler.py:finish():866] shutting down handler
+2023-11-22 17:56:13,451 INFO    WriterThread:34249 [datastore.py:close():294] close: /Users/msandoval/py_projects/ias/ws2324/bai/nanoGPT/wandb/run-20231122_175030-uflc02dv/run-uflc02dv.wandb
+2023-11-22 17:56:13,594 INFO    SenderThread:34249 [sender.py:finish():1536] shutting down sender
+2023-11-22 17:56:13,595 INFO    SenderThread:34249 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-22 17:56:13,595 INFO    SenderThread:34249 [file_pusher.py:join():181] waiting for file pusher
