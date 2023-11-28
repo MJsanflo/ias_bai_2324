@@ -3,8 +3,8 @@ import os
 import numpy as np
 import pickle
 
-input_directory = "data/multiplication/f_f_data/"
-output_file_path = "data/multiplication/numbers.txt"
+input_directory = "f_f_data/"
+output_file_path = "numbers.txt"
 
 
 def prepare(input_directory: str, output_file_path: str):

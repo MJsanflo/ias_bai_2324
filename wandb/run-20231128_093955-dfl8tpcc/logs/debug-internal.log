@@ -1,0 +1,57 @@
+2023-11-28 09:39:55,561 INFO    StreamThr :12207 [internal.py:wandb_internal():86] W&B internal server running at pid: 12207, started at: 2023-11-28 09:39:55.560370
+2023-11-28 09:39:55,563 DEBUG   HandlerThread:12207 [handler.py:handle_request():146] handle_request: status
+2023-11-28 09:39:55,569 INFO    WriterThread:12207 [datastore.py:open_for_write():85] open: /Users/msandoval/py_projects/ias/ws2324/bai/wandb/run-20231128_093955-dfl8tpcc/run-dfl8tpcc.wandb
+2023-11-28 09:39:55,570 DEBUG   SenderThread:12207 [sender.py:send():380] send: header
+2023-11-28 09:39:55,609 DEBUG   SenderThread:12207 [sender.py:send():380] send: run
+2023-11-28 09:39:56,039 INFO    SenderThread:12207 [dir_watcher.py:__init__():211] watching files in: /Users/msandoval/py_projects/ias/ws2324/bai/wandb/run-20231128_093955-dfl8tpcc/files
+2023-11-28 09:39:56,039 INFO    SenderThread:12207 [sender.py:_start_run_threads():1124] run started: dfl8tpcc with start time 1701160795.561761
+2023-11-28 09:39:56,055 DEBUG   HandlerThread:12207 [handler.py:handle_request():146] handle_request: check_version
+2023-11-28 09:39:56,055 DEBUG   SenderThread:12207 [sender.py:send_request():407] send_request: check_version
+2023-11-28 09:39:56,196 DEBUG   HandlerThread:12207 [handler.py:handle_request():146] handle_request: run_start
+2023-11-28 09:39:56,209 DEBUG   HandlerThread:12207 [system_info.py:__init__():32] System info init
+2023-11-28 09:39:56,209 DEBUG   HandlerThread:12207 [system_info.py:__init__():47] System info init done
+2023-11-28 09:39:56,210 INFO    HandlerThread:12207 [system_monitor.py:start():194] Starting system monitor
+2023-11-28 09:39:56,210 INFO    SystemMonitor:12207 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-28 09:39:56,211 INFO    HandlerThread:12207 [system_monitor.py:probe():214] Collecting system info
+2023-11-28 09:39:56,211 DEBUG   HandlerThread:12207 [system_info.py:probe():196] Probing system
+2023-11-28 09:39:56,211 INFO    SystemMonitor:12207 [interfaces.py:start():190] Started cpu monitoring
+2023-11-28 09:39:56,212 INFO    SystemMonitor:12207 [interfaces.py:start():190] Started disk monitoring
+2023-11-28 09:39:56,214 INFO    SystemMonitor:12207 [interfaces.py:start():190] Started memory monitoring
+2023-11-28 09:39:56,215 INFO    SystemMonitor:12207 [interfaces.py:start():190] Started network monitoring
+2023-11-28 09:39:56,224 DEBUG   HandlerThread:12207 [system_info.py:_probe_git():181] Probing git
+2023-11-28 09:39:56,274 DEBUG   HandlerThread:12207 [system_info.py:_probe_git():189] Probing git done
+2023-11-28 09:39:56,274 DEBUG   HandlerThread:12207 [system_info.py:probe():244] Probing system done
+2023-11-28 09:39:56,274 DEBUG   HandlerThread:12207 [system_monitor.py:probe():223] {'os': 'macOS-14.0-x86_64-i386-64bit', 'python': '3.11.6', 'heartbeatAt': '2023-11-28T08:39:56.211530', 'startedAt': '2023-11-28T08:39:55.552076', 'docker': None, 'cuda': None, 'args': ('config/train_multiplications_scratch_baby.py',), 'state': 'running', 'program': '/Users/msandoval/py_projects/ias/ws2324/bai/train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'git@github.com:MJsanflo/ias_bai_2324.git', 'commit': '961d06db467fe2ad86827059b8eb29cccf69d260'}, 'email': None, 'root': '/Users/msandoval/py_projects/ias/ws2324/bai', 'host': 'Manuels-MBP', 'username': 'msandoval', 'executable': '/Users/msandoval/py_virtual_envs/bai_1/bin/python', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2000, 'min': 2000, 'max': 2000}, 'cpu_freq_per_core': [{'current': 2000, 'min': 2000, 'max': 2000}], 'disk': {'/': {'total': 931.546989440918, 'used': 12.428295135498047}}, 'memory': {'total': 32.0}}
+2023-11-28 09:39:56,274 INFO    HandlerThread:12207 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-28 09:39:56,274 INFO    HandlerThread:12207 [system_monitor.py:probe():227] Publishing system info
+2023-11-28 09:39:56,274 DEBUG   HandlerThread:12207 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-28 09:39:56,275 DEBUG   HandlerThread:12207 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-28 09:39:56,276 INFO    HandlerThread:12207 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-28 09:39:56,281 DEBUG   SenderThread:12207 [sender.py:send():380] send: files
+2023-11-28 09:39:56,281 INFO    SenderThread:12207 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2023-11-28 09:39:56,290 DEBUG   SenderThread:12207 [sender.py:send():380] send: telemetry
+2023-11-28 09:39:56,291 DEBUG   HandlerThread:12207 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-28 09:39:56,291 DEBUG   HandlerThread:12207 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-28 09:39:56,292 DEBUG   SenderThread:12207 [sender.py:send_request():407] send_request: stop_status
+2023-11-28 09:39:56,952 INFO    wandb-upload_0:12207 [upload_job.py:push():131] Uploaded file /var/folders/vp/22rdd2y94w319qjxgs_q7j1m0000gn/T/tmp2gwxpjt1wandb/j3ngp310-wandb-metadata.json
+2023-11-28 09:39:57,044 INFO    Thread-12 :12207 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/msandoval/py_projects/ias/ws2324/bai/wandb/run-20231128_093955-dfl8tpcc/files/requirements.txt
+2023-11-28 09:39:57,044 INFO    Thread-12 :12207 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/msandoval/py_projects/ias/ws2324/bai/wandb/run-20231128_093955-dfl8tpcc/files/wandb-metadata.json
+2023-11-28 09:40:00,582 DEBUG   HandlerThread:12207 [handler.py:handle_request():146] handle_request: status_report
+2023-11-28 09:40:05,598 DEBUG   HandlerThread:12207 [handler.py:handle_request():146] handle_request: status_report
+2023-11-28 09:40:06,071 INFO    Thread-12 :12207 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/msandoval/py_projects/ias/ws2324/bai/wandb/run-20231128_093955-dfl8tpcc/files/output.log
+2023-11-28 09:40:06,647 DEBUG   HandlerThread:12207 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-28 09:40:06,648 DEBUG   SenderThread:12207 [sender.py:send():380] send: history
+2023-11-28 09:40:06,648 DEBUG   SenderThread:12207 [sender.py:send_request():407] send_request: summary_record
+2023-11-28 09:40:06,649 INFO    SenderThread:12207 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-28 09:40:07,076 INFO    Thread-12 :12207 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/msandoval/py_projects/ias/ws2324/bai/wandb/run-20231128_093955-dfl8tpcc/files/wandb-summary.json
+2023-11-28 09:40:08,078 INFO    Thread-12 :12207 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/wandb/run-20231128_093955-dfl8tpcc/files/output.log
+2023-11-28 09:40:10,082 INFO    Thread-12 :12207 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/wandb/run-20231128_093955-dfl8tpcc/files/output.log
+2023-11-28 09:40:10,855 DEBUG   HandlerThread:12207 [handler.py:handle_request():146] handle_request: status_report
+2023-11-28 09:40:11,288 DEBUG   HandlerThread:12207 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-28 09:40:11,288 DEBUG   SenderThread:12207 [sender.py:send_request():407] send_request: stop_status
+2023-11-28 09:40:11,289 DEBUG   HandlerThread:12207 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-28 09:40:12,087 INFO    Thread-12 :12207 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/wandb/run-20231128_093955-dfl8tpcc/files/output.log
+2023-11-28 09:40:14,094 INFO    Thread-12 :12207 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/wandb/run-20231128_093955-dfl8tpcc/files/output.log
+2023-11-28 09:40:16,095 INFO    Thread-12 :12207 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/wandb/run-20231128_093955-dfl8tpcc/files/output.log
+2023-11-28 09:40:16,231 DEBUG   HandlerThread:12207 [handler.py:handle_request():146] handle_request: status_report
+2023-11-28 09:40:18,103 INFO    Thread-12 :12207 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/msandoval/py_projects/ias/ws2324/bai/wandb/run-20231128_093955-dfl8tpcc/files/output.log

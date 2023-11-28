@@ -1,0 +1,47 @@
+{
+    "os": "macOS-14.0-x86_64-i386-64bit",
+    "python": "3.11.6",
+    "heartbeatAt": "2023-11-28T08:39:56.211530",
+    "startedAt": "2023-11-28T08:39:55.552076",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "config/train_multiplications_scratch_baby.py"
+    ],
+    "state": "running",
+    "program": "/Users/msandoval/py_projects/ias/ws2324/bai/train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "git@github.com:MJsanflo/ias_bai_2324.git",
+        "commit": "961d06db467fe2ad86827059b8eb29cccf69d260"
+    },
+    "email": null,
+    "root": "/Users/msandoval/py_projects/ias/ws2324/bai",
+    "host": "Manuels-MBP",
+    "username": "msandoval",
+    "executable": "/Users/msandoval/py_virtual_envs/bai_1/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2000,
+        "min": 2000,
+        "max": 2000
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2000,
+            "min": 2000,
+            "max": 2000
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 931.546989440918,
+            "used": 12.428295135498047
+        }
+    },
+    "memory": {
+        "total": 32.0
+    }
+}
