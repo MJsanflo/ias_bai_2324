@@ -1,41 +1,19 @@
-import json
-import os
 import numpy as np
+import os
 import pickle
+import random
 
-input_directory = "f_f_data/"
-output_file_path = "numbers.txt"
+max_num_of_digits = 1
+min_num_of_digits = 1
 
 
-def prepare(input_directory: str, output_file_path: str):
-    # Get a list of files with the suffix 'fine_tune.jsonl'
-    files = [file for file in os.listdir(input_directory) if file.endswith("fine_tune.jsonl")]
-
-    # Iterate through each file
-    data_dict_list = []
-    for file in files:
-        file_path = os.path.join(input_directory, file)
-        with open(file_path, "r") as f:
-            lines = f.readlines()
-
-        # Extract prompt and completion from each line in the file
-        file_data_dict_list = [
-            {"prompt": json.loads(line)["prompt"].replace("\n", "").replace("#", "").strip(),
-             "completion": json.loads(line)["completion"].replace("\n", "").replace("#", "").strip()}
-            for line in lines
-        ]
-
-        data_dict_list.extend(file_data_dict_list)
-
-    data_str_list = "\n\n".join([f'{d["prompt"]}\n{d["completion"]}' for d in data_dict_list])
-    print(f"length of dataset in characters: {len(data_str_list):,}")
-
-    # Write the content to numbers.txt
-    with open(output_file_path, "w") as output_file:
-        output_file.write(data_str_list)
+def prepare(input_file_path: str):
+    with open(input_file_path, "r") as f:
+        data = f.read()
+    print(f"length of dataset in characters: {len(data):,}")
 
     # get all the unique characters that occur in this text
-    chars = sorted(list(set(data_str_list)))
+    chars = sorted(list(set(data)))
     vocab_size = len(chars)
     print("all the unique characters:", "".join(chars))
     print(f"vocab size: {vocab_size:,}")
@@ -48,12 +26,14 @@ def prepare(input_directory: str, output_file_path: str):
         return [stoi[c] for c in s]  # encoder: take a string, output a list of integers
 
     def decode(l):
-        return "".join([itos[i] for i in l])  # decoder: take a list of integers, output a string
+        return "".join(
+            [itos[i] for i in l]
+        )  # decoder: take a list of integers, output a string
 
     # create the train and test splits
-    n = len(data_str_list)
-    train_data = data_str_list[: int(n * 0.9)]
-    val_data = data_str_list[int(n * 0.9):]
+    n = len(data)
+    train_data = data[: int(n * 0.9)]
+    val_data = data[int(n * 0.9) :]
 
     # encode both to integers
     train_ids = encode(train_data)
@@ -68,10 +48,43 @@ def prepare(input_directory: str, output_file_path: str):
     val_ids.tofile(os.path.join(os.path.dirname(__file__), "val.bin"))
 
     # save the meta information as well, to help us encode/decode later
-    meta = {"vocab_size": vocab_size, "itos": itos, "stoi": stoi}
+    meta = {
+        "vocab_size": vocab_size,
+        "itos": itos,
+        "stoi": stoi,
+    }
     with open(os.path.join(os.path.dirname(__file__), "meta.pkl"), "wb") as f:
         pickle.dump(meta, f)
 
 
+def generate_numbers(filename: str):
+    print(
+        f"Generating all {max_num_of_digits} x {max_num_of_digits} digits down to {min_num_of_digits}"
+    )
+    number_list = []
+    for i in range(10 ** (max_num_of_digits - 1), 10**max_num_of_digits):
+        for j in range(10 ** (max_num_of_digits - 1), 10**max_num_of_digits):
+            number_list.append(f"What is {i} times {j}?\n{i*j}\n\n")
+
+    random.shuffle(number_list)
+    with open(f"./data/multiplication/{filename}.txt", "w") as file:
+        for number in number_list[0 : int(len(number_list) * 0.9)]:
+            file.write(number)
+
+    with open(f"./data/multiplication/{filename}_test.txt", "w") as file:
+        for number in number_list[int(len(number_list) * 0.9) :]:
+            file.write(number)
+
+
 if __name__ == "__main__":
-    prepare(input_directory, output_file_path)
+    filename = "numbers"
+    generate_numbers(filename + str(max_num_of_digits))
+    prepare(f"./data/multiplication/{filename +str(max_num_of_digits)}.txt")
+
+
+# length of dataset in characters: 148,021,001
+# all the unique characters:
+# 0123456789=x
+# vocab size: 13
+# train has 133,218,900 tokens
+# val has 14,802,101 tokens

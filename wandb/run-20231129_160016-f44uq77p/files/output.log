@@ -1,0 +1,108 @@
+
+step 0: train loss 10.7592, val loss 10.7430
+iter 0: loss 10.7590, time 11174.35ms, mfu -100.00%
+iter 1: loss 10.7561, time 655.73ms, mfu -100.00%
+iter 2: loss 10.7315, time 712.26ms, mfu -100.00%
+iter 3: loss 10.6517, time 626.45ms, mfu -100.00%
+iter 4: loss 10.5649, time 595.78ms, mfu -100.00%
+iter 5: loss 10.4400, time 627.51ms, mfu 0.02%
+iter 6: loss 10.3033, time 832.07ms, mfu 0.02%
+iter 7: loss 10.1882, time 914.46ms, mfu 0.02%
+iter 8: loss 10.0794, time 841.04ms, mfu 0.02%
+iter 9: loss 9.9813, time 783.43ms, mfu 0.02%
+iter 10: loss 9.9185, time 924.35ms, mfu 0.02%
+iter 11: loss 9.8414, time 800.72ms, mfu 0.02%
+iter 12: loss 9.7728, time 813.89ms, mfu 0.01%
+iter 13: loss 9.7109, time 879.26ms, mfu 0.01%
+iter 14: loss 9.6552, time 893.80ms, mfu 0.01%
+iter 15: loss 9.5560, time 903.43ms, mfu 0.01%
+iter 16: loss 9.4685, time 1097.99ms, mfu 0.01%
+iter 17: loss 9.3907, time 982.22ms, mfu 0.01%
+iter 18: loss 9.3235, time 887.86ms, mfu 0.01%
+iter 19: loss 9.2559, time 901.06ms, mfu 0.01%
+iter 20: loss 9.1963, time 912.74ms, mfu 0.01%
+iter 21: loss 9.1001, time 899.23ms, mfu 0.01%
+iter 22: loss 9.0347, time 848.61ms, mfu 0.01%
+iter 23: loss 8.9711, time 893.92ms, mfu 0.01%
+iter 24: loss 8.8904, time 909.70ms, mfu 0.01%
+iter 25: loss 8.8157, time 1000.49ms, mfu 0.01%
+iter 26: loss 8.7784, time 958.13ms, mfu 0.01%
+iter 27: loss 8.6944, time 891.66ms, mfu 0.01%
+iter 28: loss 8.6379, time 828.73ms, mfu 0.01%
+iter 29: loss 8.5670, time 889.88ms, mfu 0.01%
+iter 30: loss 8.5078, time 868.86ms, mfu 0.01%
+iter 31: loss 8.4439, time 863.83ms, mfu 0.01%
+iter 32: loss 8.3638, time 956.48ms, mfu 0.01%
+iter 33: loss 8.2976, time 871.27ms, mfu 0.01%
+iter 34: loss 8.2151, time 847.69ms, mfu 0.01%
+iter 35: loss 8.1364, time 874.08ms, mfu 0.01%
+iter 36: loss 8.0673, time 886.88ms, mfu 0.01%
+iter 37: loss 7.9749, time 882.40ms, mfu 0.01%
+iter 38: loss 7.9123, time 935.82ms, mfu 0.01%
+iter 39: loss 7.8172, time 869.71ms, mfu 0.01%
+iter 40: loss 7.7261, time 907.51ms, mfu 0.01%
+iter 41: loss 7.6176, time 875.20ms, mfu 0.01%
+iter 42: loss 7.5468, time 1136.43ms, mfu 0.01%
+iter 43: loss 7.4366, time 1325.99ms, mfu 0.01%
+iter 44: loss 7.3426, time 1148.19ms, mfu 0.01%
+iter 45: loss 7.2378, time 905.53ms, mfu 0.01%
+iter 46: loss 7.1235, time 849.43ms, mfu 0.01%
+iter 47: loss 7.0218, time 816.55ms, mfu 0.01%
+iter 48: loss 6.9196, time 752.29ms, mfu 0.01%
+iter 49: loss 6.7846, time 878.89ms, mfu 0.01%
+iter 50: loss 6.6721, time 749.63ms, mfu 0.01%
+iter 51: loss 6.5640, time 817.09ms, mfu 0.01%
+iter 52: loss 6.4109, time 840.85ms, mfu 0.01%
+iter 53: loss 6.2862, time 856.20ms, mfu 0.01%
+iter 54: loss 6.1619, time 938.56ms, mfu 0.01%
+iter 55: loss 5.9992, time 829.85ms, mfu 0.01%
+iter 56: loss 5.8815, time 964.61ms, mfu 0.01%
+iter 57: loss 5.7042, time 846.73ms, mfu 0.01%
+iter 58: loss 5.5830, time 842.43ms, mfu 0.01%
+iter 59: loss 5.4442, time 735.55ms, mfu 0.01%
+iter 60: loss 5.2844, time 748.65ms, mfu 0.01%
+iter 61: loss 5.1277, time 687.67ms, mfu 0.01%
+iter 62: loss 4.9577, time 905.41ms, mfu 0.01%
+iter 63: loss 4.8030, time 908.18ms, mfu 0.01%
+iter 64: loss 4.6354, time 776.46ms, mfu 0.01%
+iter 65: loss 4.4688, time 783.86ms, mfu 0.01%
+iter 66: loss 4.3103, time 705.10ms, mfu 0.01%
+iter 67: loss 4.1641, time 815.18ms, mfu 0.01%
+iter 68: loss 4.0020, time 720.43ms, mfu 0.01%
+iter 69: loss 3.8222, time 878.59ms, mfu 0.01%
+iter 70: loss 3.6512, time 818.87ms, mfu 0.01%
+iter 71: loss 3.5032, time 844.85ms, mfu 0.01%
+iter 72: loss 3.3412, time 867.01ms, mfu 0.01%
+iter 73: loss 3.2050, time 802.83ms, mfu 0.01%
+iter 74: loss 3.0718, time 914.23ms, mfu 0.01%
+iter 75: loss 2.8993, time 930.91ms, mfu 0.01%
+iter 76: loss 2.7632, time 953.81ms, mfu 0.01%
+iter 77: loss 2.6663, time 1016.78ms, mfu 0.01%
+iter 78: loss 2.5276, time 885.98ms, mfu 0.01%
+iter 79: loss 2.4399, time 859.51ms, mfu 0.01%
+iter 80: loss 2.3610, time 857.77ms, mfu 0.01%
+iter 81: loss 2.2414, time 878.33ms, mfu 0.01%
+iter 82: loss 2.1605, time 913.65ms, mfu 0.01%
+iter 83: loss 2.0634, time 882.85ms, mfu 0.01%
+iter 84: loss 1.9813, time 868.94ms, mfu 0.01%
+iter 85: loss 1.9721, time 954.88ms, mfu 0.01%
+iter 86: loss 1.8454, time 977.72ms, mfu 0.01%
+iter 87: loss 1.8451, time 1081.88ms, mfu 0.01%
+iter 88: loss 1.7219, time 1235.53ms, mfu 0.01%
+Traceback (most recent call last):
+  File "C:\Users\jerem\VSCodeProjects\ias_bai_2324\train.py", line 297, in <module>
+    logits, loss = model(X, Y)
+                   ^^^^^^^^^^^
+  File "C:\Users\jerem\AppData\Roaming\Python\Python311\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jerem\AppData\Roaming\Python\Python311\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jerem\VSCodeProjects\ias_bai_2324\model.py", line 187, in forward
+    loss = F.cross_entropy(logits.view(-1, logits.size(-1)), targets.view(-1), ignore_index=-1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jerem\AppData\Roaming\Python\Python311\site-packages\torch\nn\functional.py", line 3053, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

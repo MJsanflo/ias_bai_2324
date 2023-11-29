@@ -1,0 +1,27 @@
+What is 8 times 3?
+24
+
+What is 7 times 5?
+35
+
+What is 5 times 1?
+5
+
+What is 5 times 8?
+40
+
+What is 8 times 7?
+56
+
+What is 6 times 6?
+36
+
+What is 4 times 2?
+8
+
+What is 3 times 6?
+18
+
+What is 9 times 3?
+27
+

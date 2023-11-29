@@ -1,0 +1,44 @@
+step 0: train loss 10.7592, val loss 10.7430
+iter 0: loss 10.7590, time 9726.16ms, mfu -100.00%
+iter 1: loss 10.7561, time 612.89ms, mfu -100.00%
+iter 2: loss 10.7315, time 683.46ms, mfu -100.00%
+iter 3: loss 10.6517, time 600.23ms, mfu -100.00%
+iter 4: loss 10.5649, time 614.65ms, mfu -100.00%
+iter 5: loss 10.4400, time 703.78ms, mfu 0.02%
+iter 6: loss 10.3033, time 813.90ms, mfu 0.02%
+iter 7: loss 10.1882, time 725.01ms, mfu 0.02%
+iter 8: loss 10.0794, time 748.83ms, mfu 0.02%
+iter 9: loss 9.9813, time 963.65ms, mfu 0.01%
+iter 10: loss 9.9185, time 792.61ms, mfu 0.01%
+iter 11: loss 9.8414, time 785.76ms, mfu 0.01%
+iter 12: loss 9.7728, time 735.93ms, mfu 0.01%
+iter 13: loss 9.7109, time 782.80ms, mfu 0.01%
+iter 14: loss 9.6552, time 882.39ms, mfu 0.01%
+iter 15: loss 9.5560, time 994.77ms, mfu 0.01%
+iter 16: loss 9.4685, time 866.85ms, mfu 0.01%
+iter 17: loss 9.3907, time 737.26ms, mfu 0.01%
+iter 18: loss 9.3235, time 800.22ms, mfu 0.01%
+iter 19: loss 9.2559, time 1001.59ms, mfu 0.01%
+iter 20: loss 9.1963, time 994.29ms, mfu 0.01%
+iter 21: loss 9.1001, time 1045.23ms, mfu 0.01%
+iter 22: loss 9.0347, time 954.97ms, mfu 0.01%
+iter 23: loss 8.9711, time 932.78ms, mfu 0.01%
+iter 24: loss 8.8904, time 872.73ms, mfu 0.01%
+iter 25: loss 8.8157, time 832.31ms, mfu 0.01%
+iter 26: loss 8.7784, time 800.01ms, mfu 0.01%
+iter 27: loss 8.6944, time 855.13ms, mfu 0.01%
+iter 28: loss 8.6379, time 1015.65ms, mfu 0.01%
+iter 29: loss 8.5670, time 935.69ms, mfu 0.01%
+iter 30: loss 8.5078, time 934.00ms, mfu 0.01%
+iter 31: loss 8.4439, time 912.83ms, mfu 0.01%
+iter 32: loss 8.3638, time 960.08ms, mfu 0.01%
+iter 33: loss 8.2976, time 916.89ms, mfu 0.01%
+iter 34: loss 8.2151, time 1034.95ms, mfu 0.01%
+Traceback (most recent call last):
+  File "C:\Users\jerem\VSCodeProjects\ias_bai_2324\train.py", line 302, in <module>
+    scaler.scale(loss).backward()
+  File "C:\Users\jerem\AppData\Roaming\Python\Python311\site-packages\torch\_tensor.py", line 492, in backward
+    torch.autograd.backward(
+  File "C:\Users\jerem\AppData\Roaming\Python\Python311\site-packages\torch\autograd\__init__.py", line 251, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
