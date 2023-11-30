@@ -11,7 +11,7 @@ always_save_checkpoint = False
 
 wandb_log = True  # override via command line if you like
 wandb_project = "multiplication-char"
-wandb_run_name = "1_digit_scratch_baby"
+wandb_run_name = "3-to-1-scratch"
 init_from = "scratch"
 
 dataset = "multiplication"

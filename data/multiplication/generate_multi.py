@@ -3,7 +3,7 @@ import os
 import pickle
 import random
 
-max_num_of_digits = 1
+max_num_of_digits = 3
 min_num_of_digits = 1
 
 
@@ -59,27 +59,28 @@ def prepare(input_file_path: str):
 
 def generate_numbers(filename: str):
     print(
-        f"Generating all {max_num_of_digits} x {max_num_of_digits} digits down to {min_num_of_digits}"
+        f"Generating all {max_num_of_digits} x {max_num_of_digits} digits down to {min_num_of_digits} x {min_num_of_digits}"
     )
     number_list = []
-    for i in range(10 ** (max_num_of_digits - 1), 10**max_num_of_digits):
-        for j in range(10 ** (max_num_of_digits - 1), 10**max_num_of_digits):
-            number_list.append(f"What is {i} times {j}?\n{i*j}\n\n")
+    for length in range(max_num_of_digits):
+        for i in range(10**length, (10 ** (length + 1)) - 1):
+            for j in range(10**length, (10 ** (length + 1)) - 1):
+                number_list.append(f"What is {i} times {j}?\n{i*j}\n\n")
 
     random.shuffle(number_list)
     with open(f"./data/multiplication/{filename}.txt", "w") as file:
-        for number in number_list[0 : int(len(number_list) * 0.9)]:
+        for number in number_list[20000:]:
             file.write(number)
 
     with open(f"./data/multiplication/{filename}_test.txt", "w") as file:
-        for number in number_list[int(len(number_list) * 0.9) :]:
+        for number in number_list[0:20000]:
             file.write(number)
 
 
 if __name__ == "__main__":
     filename = "numbers"
-    generate_numbers(filename + str(max_num_of_digits))
-    prepare(f"./data/multiplication/{filename +str(max_num_of_digits)}.txt")
+    generate_numbers(filename + "all")
+    prepare(f"./data/multiplication/{filename}all.txt")
 
 
 # length of dataset in characters: 148,021,001

@@ -17,7 +17,7 @@ def sample():
     start = ""
     out_dir = "out-multi"  # ignored if init_from is not 'resume'
     num_samples = 1  # number of samples to draw
-    max_new_tokens = 3  # number of tokens generated in each sample
+    max_new_tokens = 7  # number of tokens generated in each sample
     temperature = (
         0.8  # 1.0 = no change, < 1.0 = less random, > 1.0 = more random, in predictions
     )
@@ -102,7 +102,7 @@ def sample():
         with open(start[5:], "r", encoding="utf-8") as f:
             start = f.read()
     acc = 0
-    eval_list = create_eval_list()[0:10000]
+    eval_list = create_eval_list()[0:100]
     for eval_sample in eval_list:
         start_ids = encode(eval_sample[0])
         x = torch.tensor(start_ids, dtype=torch.long, device=device)[None, ...]
@@ -115,19 +115,25 @@ def sample():
                     )
 
                     pred = decode(y[0].tolist()).split("\n")
-                    pred = pred[1]
-                    print(f"{pred} || {eval_sample[1]}")
+                    # print(pred)
+                    if len(pred) > 1:
+                        pred = pred[1]
+                    else:
+                        # acc += 0
+                        continue
+                    # print(f"{pred} || {eval_sample[1]}")
                     if pred == eval_sample[1]:
                         acc += 1
                     else:
-                        acc += 0
+                        # acc += 0
+                        continue
     print(f"Accuracy: {acc/len(eval_list)}")
 
 
 def create_eval_list() -> list[tuple[str, str]]:
     eval = []
     # replace with current number test file path
-    with open("./data/multiplication/numbers1.txt") as file:
+    with open("./data/multiplication/numbers3_test.txt") as file:
         while True:
             line1 = file.readline()
             line2 = file.readline()
