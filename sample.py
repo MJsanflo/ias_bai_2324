@@ -8,9 +8,14 @@ import torch
 import tiktoken
 from model import GPTConfig, GPT
 
+drive_path = ""  # for google colab
+
 
 def sample():
     # -----------------------------------------------------------------------------
+    colabMode = (
+        False  # Set to true if you run it on google colab and cant use the configurator
+    )
     init_from = (
         "resume"  # either 'resume' (from an out_dir) or a gpt2 variant (e.g. 'gpt2-xl')
     )
@@ -23,14 +28,23 @@ def sample():
     )
     top_k = 20  # retain only the top_k most likely tokens, clamp others to have 0 probability
     seed = 1337
-    device = "cpu"  # examples: 'cpu', 'cuda', 'cuda:0', 'cuda:1', etc.
+    device = (
+        "cuda" if colabMode else "cpu"
+    )  # examples: 'cpu', 'cuda', 'cuda:0', 'cuda:1', etc.
     dtype = (
         "bfloat16"
         if torch.cuda.is_available() and torch.cuda.is_bf16_supported()
         else "float16"
     )  # 'float32' or 'bfloat16' or 'float16'
-    compile = False  # use PyTorch 2.0 to compile the model to be faster
-    exec(open("configurator.py").read())  # overrides from command line or config file
+    compile = (
+        True if colabMode else False
+    )  # use PyTorch 2.0 to compile the model to be faster
+    if not colabMode:
+        exec(
+            open("configurator.py").read()
+        )  # overrides from command line or config file
+    else:
+        out_dir = drive_path + out_dir
     # -----------------------------------------------------------------------------
 
     torch.manual_seed(seed)
@@ -80,7 +94,9 @@ def sample():
         and "config" in checkpoint
         and "dataset" in checkpoint["config"]
     ):  # older checkpoints might not have these...
-        meta_path = os.path.join("data", checkpoint["config"]["dataset"], "meta.pkl")
+        meta_path = os.path.join(
+            drive_path, "data", checkpoint["config"]["dataset"], "meta.pkl"
+        )
         load_meta = os.path.exists(meta_path)
     if load_meta:
         print(f"Loading meta from {meta_path}...")
@@ -102,7 +118,9 @@ def sample():
         with open(start[5:], "r", encoding="utf-8") as f:
             start = f.read()
     acc = 0
-    eval_list = create_eval_list()[0:100]
+    per_digit_acc = {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0}
+    eval_list = create_eval_list()[:10000]
+    pairs = []
     for eval_sample in eval_list:
         start_ids = encode(eval_sample[0])
         x = torch.tensor(start_ids, dtype=torch.long, device=device)[None, ...]
@@ -122,15 +140,32 @@ def sample():
                         # acc += 0
                         continue
                     # print(f"{pred} || {eval_sample[1]}")
+                    pairs.append((pred, eval_sample[1]))
                     if pred == eval_sample[1]:
                         acc += 1
-    print(f"Accuracy: {acc/len(eval_list)}")
+                        for key in per_digit_acc:
+                            per_digit_acc[key] += 1
+                    else:
+                        for index, char in enumerate(eval_sample[1]):
+                            # print(index,char)
+                            if 0 <= index < len(pred) and char == pred[index]:
+                                per_digit_acc[str(index + 1)] += 1
+
+    for key in per_digit_acc:
+        per_digit_acc[key] = per_digit_acc[key] / len(eval_list)
+    print(f"Accuracy: {acc/len(eval_list)}\n\n")
+    for key, value in per_digit_acc.items():
+        print(f"{key}\t{value}")
+    return pairs
 
 
 def create_eval_list() -> list[tuple[str, str]]:
     eval = []
     # replace with current number test file path
-    with open("./data/multiplication/numbersall.txt") as file:
+    with open(
+        os.path.join(drive_path, "data", "multiplication", "ood_numbers.txt"),
+        "r",
+    ) as file:
         while True:
             line1 = file.readline()
             line2 = file.readline()
@@ -142,4 +177,4 @@ def create_eval_list() -> list[tuple[str, str]]:
     return eval
 
 
-sample()
+data = sample()

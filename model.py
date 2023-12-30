@@ -71,7 +71,7 @@ class CausalSelfAttention(nn.Module):
         print(f"Using {config.pos_enc} positional encoding!")
         # new part for relative positional encoding
         self.head_dim = config.n_embd // config.n_head
-        self.max_relative_position = 2
+        self.max_relative_position = 10
         self.relative_position_k = RelativePosition(
             self.head_dim, self.max_relative_position
         )

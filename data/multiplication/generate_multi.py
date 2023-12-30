@@ -1,8 +1,10 @@
 import numpy as np
-import os
 import pickle
 import random
+from random import randint
 
+drive_path = ""
+random.seed(42)
 max_num_of_digits = 3
 min_num_of_digits = 1
 
@@ -44,8 +46,8 @@ def prepare(input_file_path: str):
     # export to bin files
     train_ids = np.array(train_ids, dtype=np.uint16)
     val_ids = np.array(val_ids, dtype=np.uint16)
-    train_ids.tofile(os.path.join(os.path.dirname(__file__), "train.bin"))
-    val_ids.tofile(os.path.join(os.path.dirname(__file__), "val.bin"))
+    train_ids.tofile(drive_path + "data/multiplication/train.bin")
+    val_ids.tofile(drive_path + "data/multiplication/val.bin")
 
     # save the meta information as well, to help us encode/decode later
     meta = {
@@ -53,7 +55,7 @@ def prepare(input_file_path: str):
         "itos": itos,
         "stoi": stoi,
     }
-    with open(os.path.join(os.path.dirname(__file__), "meta.pkl"), "wb") as f:
+    with open(drive_path + "data/multiplication/meta.pkl", "wb") as f:
         pickle.dump(meta, f)
 
 
@@ -68,24 +70,34 @@ def generate_numbers(filename: str):
                 number_list.append(f"What is {i} times {j}?\n{i*j}\n\n")
 
     random.shuffle(number_list)
-    with open(f"./data/multiplication/{filename}.txt", "w") as file:
+    with open(f"{filename}.txt", "w") as file:
         for number in number_list[20000:]:
             file.write(number)
 
-    with open(f"./data/multiplication/{filename}_test.txt", "w") as file:
+    with open(f"{filename}_test.txt", "w") as file:
         for number in number_list[0:20000]:
             file.write(number)
 
 
+def generateOutOfDistributionNumbers(firstDigitLength, secondDigitLength, amount=10000):
+    # generate out of distribution numbers (4x3)
+    print("Generating out of distribution numbers")
+    with open(drive_path + "data/multiplication/ood_numbers.txt", "w") as file:
+        for _ in range(amount):
+            first_number = randint(
+                10 ** (firstDigitLength - 1), 10**firstDigitLength - 1
+            )
+            second_number = randint(
+                10 ** (secondDigitLength - 1), 10**secondDigitLength - 1
+            )
+            file.write(
+                f"What is {first_number} times {second_number}?\n{first_number* second_number}\n\n"
+            )
+
+
 if __name__ == "__main__":
     filename = "numbers"
-    generate_numbers(filename + "all")
-    prepare(f"./data/multiplication/{filename}all.txt")
-
-
-# length of dataset in characters: 148,021,001
-# all the unique characters:
-# 0123456789=x
-# vocab size: 13
-# train has 133,218,900 tokens
-# val has 14,802,101 tokens
+    path = drive_path + "data/multiplication/"
+    generate_numbers(path + filename + "all")
+    prepare(f"{path}{filename}all.txt")
+    generateOutOfDistributionNumbers(4, 3)
