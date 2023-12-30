@@ -124,16 +124,13 @@ def sample():
                     # print(f"{pred} || {eval_sample[1]}")
                     if pred == eval_sample[1]:
                         acc += 1
-                    else:
-                        # acc += 0
-                        continue
     print(f"Accuracy: {acc/len(eval_list)}")
 
 
 def create_eval_list() -> list[tuple[str, str]]:
     eval = []
     # replace with current number test file path
-    with open("./data/multiplication/numbers3_test.txt") as file:
+    with open("./data/multiplication/numbersall.txt") as file:
         while True:
             line1 = file.readline()
             line2 = file.readline()

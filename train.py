@@ -1,21 +1,3 @@
-"""
-This training script can be run both on a single gpu in debug mode,
-and also in a larger training run with distributed data parallel (ddp).
-
-To run on a single GPU, example:
-$ python train.py --batch_size=32 --compile=False
-
-To run with DDP on 4 gpus on 1 node, example:
-$ torchrun --standalone --nproc_per_node=4 train.py
-
-To run with DDP on 4 gpus across 2 nodes, example:
-- Run on the first (master) node with example IP 123.456.123.456:
-$ torchrun --nproc_per_node=8 --nnodes=2 --node_rank=0 --master_addr=123.456.123.456 --master_port=1234 train.py
-- Run on the worker node:
-$ torchrun --nproc_per_node=8 --nnodes=2 --node_rank=1 --master_addr=123.456.123.456 --master_port=1234 train.py
-(If your cluster does not have Infiniband interconnect prepend NCCL_IB_DISABLE=1)
-"""
-
 import os
 import time
 import math
@@ -30,7 +12,7 @@ from torch.distributed import init_process_group, destroy_process_group
 from model import GPTConfig, GPT
 
 # -----------------------------------------------------------------------------
-# default config values designed to train a gpt2 (124M) on OpenWebText
+# default config values
 # I/O
 out_dir = "out"
 eval_interval = 2000
@@ -41,10 +23,10 @@ always_save_checkpoint = True  # if True, always save a checkpoint after each ev
 init_from = "scratch"  # 'scratch' or 'resume' or 'gpt2*'
 # wandb logging
 wandb_log = False  # disabled by default
-wandb_project = "owt"
-wandb_run_name = "gpt2"  # 'run' + str(time.time())
+wandb_project = "Set you project name!"
+wandb_run_name = "Set your run name!"  # 'run' + str(time.time())
 # data
-dataset = "openwebtext"
+dataset = "multiplication"
 gradient_accumulation_steps = 5 * 8  # used to simulate larger batch sizes
 batch_size = 12  # if gradient_accumulation_steps > 1, this is the micro-batch size
 block_size = 1024
@@ -66,6 +48,7 @@ decay_lr = True  # whether to decay the learning rate
 warmup_iters = 2000  # how many steps to warm up for
 lr_decay_iters = 600000  # should be ~= max_iters per Chinchilla
 min_lr = 6e-5  # minimum learning rate, should be ~= learning_rate/10 per Chinchilla
+pos_enc = "absolute"  # allowed values relative or absolute
 # DDP settings
 backend = "nccl"  # 'nccl', 'gloo', etc.
 # system
@@ -163,7 +146,7 @@ iter_num = 0
 best_val_loss = 1e9
 
 # attempt to derive vocab_size from the dataset
-meta_path = os.path.join(data_dir, "data/multiplication_old/meta.pkl")
+meta_path = os.path.join(data_dir, "meta.pkl")
 meta_vocab_size = None
 if os.path.exists(meta_path):
     with open(meta_path, "rb") as f:
@@ -178,7 +161,8 @@ model_args = dict(
     n_embd=n_embd,
     block_size=block_size,
     bias=bias,
-    vocab_size=None,
+    pos_enc=pos_enc,
+    vocab_size=meta_vocab_size,
     dropout=dropout,
 )  # start with model_args from command line
 if init_from == "scratch":
@@ -331,9 +315,7 @@ while True:
                     "config": config,
                 }
                 print(f"saving checkpoint to {out_dir}")
-                torch.save(
-                    checkpoint, os.path.join(out_dir, "ckpt.pt.gpt2_baby.scratch_baby")
-                )
+                torch.save(checkpoint, os.path.join(out_dir, "ckpt.pt"))
     if iter_num == 0 and eval_only:
         break
 
