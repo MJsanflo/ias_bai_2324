@@ -8,14 +8,12 @@ import torch
 import tiktoken
 from model import GPTConfig, GPT
 
-drive_path = ""  # for google colab
+data_folder = "data"
+dataset = "multiplication"
 
 
 def sample():
     # -----------------------------------------------------------------------------
-    colabMode = (
-        False  # Set to true if you run it on google colab and cant use the configurator
-    )
     init_from = (
         "resume"  # either 'resume' (from an out_dir) or a gpt2 variant (e.g. 'gpt2-xl')
     )
@@ -28,23 +26,14 @@ def sample():
     )
     top_k = 20  # retain only the top_k most likely tokens, clamp others to have 0 probability
     seed = 1337
-    device = (
-        "cuda" if colabMode else "cpu"
-    )  # examples: 'cpu', 'cuda', 'cuda:0', 'cuda:1', etc.
+    device = "cpu"  # examples: 'cpu', 'cuda', 'cuda:0', 'cuda:1', etc.
     dtype = (
         "bfloat16"
         if torch.cuda.is_available() and torch.cuda.is_bf16_supported()
         else "float16"
     )  # 'float32' or 'bfloat16' or 'float16'
-    compile = (
-        True if colabMode else False
-    )  # use PyTorch 2.0 to compile the model to be faster
-    if not colabMode:
-        exec(
-            open("configurator.py").read()
-        )  # overrides from command line or config file
-    else:
-        out_dir = drive_path + out_dir
+    compile = False  # use PyTorch 2.0 to compile the model to be faster
+    exec(open("configurator.py").read())  # overrides from command line or config file
     # -----------------------------------------------------------------------------
 
     torch.manual_seed(seed)
@@ -95,7 +84,7 @@ def sample():
         and "dataset" in checkpoint["config"]
     ):  # older checkpoints might not have these...
         meta_path = os.path.join(
-            drive_path, "data", checkpoint["config"]["dataset"], "meta.pkl"
+            data_folder, dataset, checkpoint["config"]["dataset"], "meta.pkl"
         )
         load_meta = os.path.exists(meta_path)
     if load_meta:
@@ -163,7 +152,7 @@ def create_eval_list() -> list[tuple[str, str]]:
     eval = []
     # replace with current number test file path
     with open(
-        os.path.join(drive_path, "data", "multiplication", "ood_numbers.txt"),
+        os.path.join(data_folder, dataset, "ood_numbers.txt"),
         "r",
     ) as file:
         while True:

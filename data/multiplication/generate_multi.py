@@ -1,9 +1,11 @@
 import numpy as np
 import pickle
 import random
+import os
 from random import randint
 
-drive_path = ""
+data_folder = "data"
+dataset = "multiplication"
 random.seed(42)
 max_num_of_digits = 3
 min_num_of_digits = 1
@@ -46,8 +48,8 @@ def prepare(input_file_path: str):
     # export to bin files
     train_ids = np.array(train_ids, dtype=np.uint16)
     val_ids = np.array(val_ids, dtype=np.uint16)
-    train_ids.tofile(drive_path + "data/multiplication/train.bin")
-    val_ids.tofile(drive_path + "data/multiplication/val.bin")
+    train_ids.tofile(os.path.join(data_folder, dataset, "train.bin"))
+    val_ids.tofile(os.path.join(data_folder, dataset, "val.bin"))
 
     # save the meta information as well, to help us encode/decode later
     meta = {
@@ -55,7 +57,7 @@ def prepare(input_file_path: str):
         "itos": itos,
         "stoi": stoi,
     }
-    with open(drive_path + "data/multiplication/meta.pkl", "wb") as f:
+    with open(os.path.join(data_folder, dataset, "meta.pkl"), "wb") as f:
         pickle.dump(meta, f)
 
 
@@ -82,7 +84,7 @@ def generate_numbers(filename: str):
 def generateOutOfDistributionNumbers(firstDigitLength, secondDigitLength, amount=10000):
     # generate out of distribution numbers (4x3)
     print("Generating out of distribution numbers")
-    with open(drive_path + "data/multiplication/ood_numbers.txt", "w") as file:
+    with open(os.path.join(data_folder, dataset, "ood_numbers.txt"), "w") as file:
         for _ in range(amount):
             first_number = randint(
                 10 ** (firstDigitLength - 1), 10**firstDigitLength - 1
@@ -97,7 +99,7 @@ def generateOutOfDistributionNumbers(firstDigitLength, secondDigitLength, amount
 
 if __name__ == "__main__":
     filename = "numbers"
-    path = drive_path + "data/multiplication/"
-    generate_numbers(path + filename + "all")
-    prepare(f"{path}{filename}all.txt")
+    path = os.path.join(data_folder, dataset, filename)
+    generate_numbers(path)
+    prepare(path + ".txt")
     generateOutOfDistributionNumbers(4, 3)

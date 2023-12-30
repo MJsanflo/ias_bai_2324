@@ -11,6 +11,7 @@ from torch.distributed import init_process_group, destroy_process_group
 
 from model import GPTConfig, GPT
 
+data_folder = "data"
 # -----------------------------------------------------------------------------
 # default config values
 # I/O
@@ -113,7 +114,7 @@ ctx = (
 )
 
 # poor man's data loader
-data_dir = os.path.join("data", dataset)
+data_dir = os.path.join(data_folder, dataset)
 train_data = np.memmap(os.path.join(data_dir, "train.bin"), dtype=np.uint16, mode="r")
 val_data = np.memmap(os.path.join(data_dir, "val.bin"), dtype=np.uint16, mode="r")
 
