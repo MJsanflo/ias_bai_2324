@@ -30,5 +30,5 @@ min_lr = 1e-4  # learning_rate / 10 usually
 beta2 = 0.99  # make a bit bigger because number of tokens per iter is small
 warmup_iters = 100  # not super necessary potentially
 
-device = "cpu"  # run on cpu only
-compile = False  # do not torch compile the model
+device = "cuda"  # run on gpu
+compile = True  # do torch compile the model
